@@ -31,12 +31,12 @@ export function Hero() {
           <div className='mt-6 flex w-full items-center justify-start gap-2 pt-2'>
             <Button asChild color='indigo'>
               <Link href='/research'>
-                Current Progress
+                Check Current Progress
                 <ArrowRight className='ml-1 h-4 w-4' />
               </Link>
             </Button>
             <Button asChild variant='ghost'>
-              <Link href='/#'>
+              <Link href={siteConfig.links.github}>
                 Contribute
                 <Icons.gitHub className='h-4 w-4' />
               </Link>
