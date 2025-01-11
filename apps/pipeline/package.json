@@ -1,0 +1,27 @@
+{
+  "name": "batch",
+  "type": "module",
+  "scripts": {
+    "crawl:rxiv": "bun run scripts/crawler-rxiv.ts",
+    "crawl:twitter": "bun run scripts/crawler-twitter.ts",
+    "batch:relevancy": "bun run scripts/relevancy-eval.ts",
+    "process:relevancy": "bun run scripts/ingest-batch-relevancy-result.ts",
+    "process": "bun run scripts/process-main.ts",
+    "format": "biome format --write .",
+    "lint": "biome check --write .",
+    "lint:unsafe": "biome check --write --unsafe ."
+  },
+  "dependencies": {
+    "@repo/db": "*",
+    "@repo/protocol-data": "*",
+    "@repo/util": "*",
+    "drizzle-orm": "^0.38.3",
+    "openai": "^4.77.3",
+    "twitter-api-sdk": "^1.2.1",
+    "zod": "^3.23"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@types/bun": "^1.1.14"
+  }
+}

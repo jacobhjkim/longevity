@@ -1,0 +1,20 @@
+{
+  "name": "agent",
+  "module": "./src/index.ts",
+  "type": "module",
+  "scripts": {
+    "start": "bun run ./src/index.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@elizaos/adapter-postgres": "^0.1.7-alpha.2",
+    "@elizaos/client-twitter": "^0.1.7-alpha.2",
+    "@elizaos/core": "^0.1.7-alpha.2",
+    "@elizaos/plugin-bootstrap": "^0.1.7-alpha.2"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "name": "@repo/ui",
+  "version": "0.0.0",
+  "type": "module",
+  "private": true,
+  "exports": {
+    "./globals.css": "./src/globals.css",
+    "./tailwind.config": "./tailwind.config.ts",
+    "./accordion": "./src/accordion.tsx",
+    "./badge": "./src/badge.tsx",
+    "./button": "./src/button.tsx",
+    "./card": "./src/card.tsx",
+    "./dialog": "./src/dialog.tsx",
+    "./drawer": "./src/drawer.tsx",
+    "./input": "./src/input.tsx",
+    "./pagination": "./src/pagination.tsx",
+    "./tabs": "./src/tabs.tsx",
+    "./table": "./src/table.tsx"
+  },
+  "scripts": {
+    "lint": "eslint . --max-warnings 0",
+    "generate:component": "turbo gen react-component",
+    "check-types": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "*",
+    "@tailwindcss/typography": "^0.5.15",
+    "@turbo/gen": "^1.12.4",
+    "@types/node": "^20.11.24",
+    "@types/react": "18.3.0",
+    "@types/react-dom": "18.3.1",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17",
+    "typescript": "5.5.4"
+  },
+  "dependencies": {
+    "@radix-ui/react-accordion": "^1.2.2",
+    "@radix-ui/react-dialog": "^1.1.4",
+    "@radix-ui/react-slot": "^1.1.1",
+    "@radix-ui/react-tabs": "^1.1.2",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.469.0",
+    "next": "^14",
+    "react": "^18",
+    "react-dom": "^18",
+    "tailwind-merge": "^2.6.0",
+    "tailwindcss-animate": "^1.0.7",
+    "vaul": "^1.1.2"
+  }
+}

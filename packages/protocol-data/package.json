@@ -1,0 +1,14 @@
+{
+  "name": "@repo/protocol-data",
+  "version": "0.0.0",
+  "type": "module",
+  "private": true,
+  "exports": {
+    ".": {
+      "default": "./markdowns/index.ts"
+    }
+  },
+  "devDependencies": {
+    "@types/bun": "^1.1.14"
+  }
+}

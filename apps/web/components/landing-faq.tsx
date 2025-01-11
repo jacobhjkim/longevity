@@ -1,0 +1,32 @@
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@repo/ui/accordion'
+
+export function LandingFaq() {
+  return (
+    <div className='flex w-full max-w-screen-xl flex-col gap-4 px-6 py-4 md:px-10 lg:px-12'>
+      <h2 className='font-semibold text-3xl'>Frequently Asked Questions</h2>
+      <Accordion type='single' collapsible className='w-full'>
+        <AccordionItem value='item-0'>
+          <AccordionTrigger>How do I claim $LONGAI token airdrop?</AccordionTrigger>
+          <AccordionContent>
+            Since this project is ins $YNE holders can claim $LONGAI airdrop via Helius' Airship.
+          </AccordionContent>
+        </AccordionItem>
+        <AccordionItem value='item-1'>
+          <AccordionTrigger>What is $LONGAI token's CA?</AccordionTrigger>
+          <AccordionContent>To be announced.</AccordionContent>
+        </AccordionItem>
+        <AccordionItem value='item-2'>
+          <AccordionTrigger>What's the token distribution plan?</AccordionTrigger>
+          <AccordionContent>
+            We will reserve 8% of the total supply for the team and 2% for the AI model fee. 16% for the airdrop, and
+            74% for the fair launch on Pump.fun.
+          </AccordionContent>
+        </AccordionItem>
+        <AccordionItem value='item-3'>
+          <AccordionTrigger>Is it animated?</AccordionTrigger>
+          <AccordionContent>Yes. It's animated by default, but you can disable it if you prefer.</AccordionContent>
+        </AccordionItem>
+      </Accordion>
+    </div>
+  )
+}
