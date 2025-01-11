@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@longevities_ai',
     creator: '@longevities_ai',
-  }
+  },
 }
 
 export default async function Home() {

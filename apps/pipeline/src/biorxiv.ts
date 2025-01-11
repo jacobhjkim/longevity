@@ -218,8 +218,8 @@ export class BiorxivAPI {
       const truncated = rawText.slice(0, 2000)
       throw new Error(
         `Failed to parse JSON from ${url}\n` +
-        `Error: ${(err as Error).message}\n` +
-        `Response (truncated to 2000 chars):\n${truncated}`,
+          `Error: ${(err as Error).message}\n` +
+          `Response (truncated to 2000 chars):\n${truncated}`,
       )
     }
   }

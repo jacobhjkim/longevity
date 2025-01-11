@@ -1,7 +1,7 @@
-import { BiorxivAPI } from '../src/biorxiv'
 import { cursorTable, db, papersTable } from '@repo/db'
 import { getTodayInterval, incrementInterval, sleep } from '@repo/util'
 import { and, eq } from 'drizzle-orm'
+import { BiorxivAPI } from '../src/biorxiv'
 import { getLatestCursor } from '../src/queries'
 
 /**

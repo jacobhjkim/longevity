@@ -1,8 +1,8 @@
+import { notFound } from 'next/navigation'
 import React from 'react'
 import { ProtocolTabs } from '~/components/protocol-tabs'
 import { diff, insertDiffComponent } from '~/lib/diff'
 import { queryProtocolUpdateByDOI, queryProtocolUpdateDOI } from '~/server/queries'
-import { notFound } from 'next/navigation'
 
 export const dynamic = 'force-static'
 

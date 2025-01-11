@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import '@repo/ui/globals.css'
+import { Analytics } from '@vercel/analytics/next'
 import { Inter, Roboto_Mono } from 'next/font/google'
 import { Footer } from '~/components/footer'
 import { SiteHeader } from '~/components/nav'
@@ -36,6 +37,7 @@ export default function RootLayout({
             <SiteHeader />
             <div className='flex min-h-96 w-full flex-1'>{children}</div>
             <Footer />
+            <Analytics />
           </div>
         </div>
       </body>
