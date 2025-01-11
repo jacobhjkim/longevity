@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://longevities.fun">
-    <img src="https://github.com/jacobhjkim/longevity/blob/master/images/banner.png" style="margin: 12px; max-width: 1500px" width="100%" alt="Banner">
+    <img src="https://raw.githubusercontent.com/jacobhjkim/longevity/refs/heads/main/images/banner.png" style="margin: 12px; max-width: 1500px" width="100%" alt="Banner">
   </a>
 </div>
 
