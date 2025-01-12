@@ -13,11 +13,6 @@ export const metadata: Metadata = {
   title: 'Longevity Research AI Agent',
   description:
     "Can an autonomous DeSci (Decentralized Science) AI agent improve Bryan Johnson's Blueprint Protocol by reading every single research paper published in bioRxiv & medRxiv?",
-  twitter: {
-    card: 'summary_large_image',
-    site: '@longevities_ai',
-    creator: '@longevities_ai',
-  },
 }
 
 export default async function Home() {

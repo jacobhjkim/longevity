@@ -22,6 +22,11 @@ export const metadata: Metadata = {
   title: 'Longevity AI',
   description: 'Decentralized Longevity Research',
   metadataBase: new URL(siteConfig.url),
+  twitter: {
+    card: 'summary_large_image',
+    site: '@longevities_ai',
+    creator: '@longevities_ai',
+  },
 }
 
 export default function RootLayout({
