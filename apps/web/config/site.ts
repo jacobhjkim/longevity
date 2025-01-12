@@ -3,10 +3,11 @@ export const siteConfig = {
   url: 'https://longevities.fun',
   ogImage: 'https://longevities.fun/og.jpg',
   description: "An AI agent that mimics Bryan Johnson's Blueprint protocol.",
+  ca: '9yBr75m6TBZzQqHeh1ztfv454pmqAiAvHUHdpPQcpump',
   links: {
     twitter: 'https://x.com/longevities_ai',
     github: 'https://github.com/jacobhjkim/longevity',
-    telegram: 'https://t.me/+becwcDR1xkRiMjM1',
+    telegram: 'https://t.me/longevity_ai_portal',
     dexscreener: 'https://dexscreener.com',
     myTwitter: 'https://twitter.com/jacobhjkim',
   },
@@ -35,7 +36,7 @@ export const siteConfig = {
     },
     {
       label: 'Telegram',
-      href: 'https://t.me/+becwcDR1xkRiMjM1',
+      href: 'https://t.me/longevity_ai_portal',
     },
   ],
 }
