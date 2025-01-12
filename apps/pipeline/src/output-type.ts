@@ -8,7 +8,7 @@ const changeFormat = z.object({
   reason: z.string(),
 })
 
-const outputFormat = z.object({
+export const outputFormat = z.object({
   eat: z.array(changeFormat),
   exercise: z.array(changeFormat),
   measurements: z.array(changeFormat),

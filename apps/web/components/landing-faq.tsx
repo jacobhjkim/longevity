@@ -8,7 +8,11 @@ export function LandingFaq() {
         <AccordionItem value='item-0'>
           <AccordionTrigger>How do I claim $LONGAI token airdrop?</AccordionTrigger>
           <AccordionContent>
-            Since this project is ins $YNE holders can claim $LONGAI airdrop via Helius' Airship.
+            Since this project was initially inspired by{' '}
+            <a href='https://yesnoerror.com/' target='_blank' rel='noreferrer'>
+              yesnoerror
+            </a>
+            , $YNE holders can claim $LONGAI airdrop via Helius' Airship.
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value='item-1'>

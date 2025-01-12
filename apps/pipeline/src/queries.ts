@@ -127,4 +127,5 @@ export async function getUnprocessedRelevantPapers() {
     .from(papersTable)
     .where(and(eq(papersTable.isRelevant, 1), eq(papersTable.isProcessed, false)))
     .orderBy(desc(papersTable.date))
+    .limit(40)
 }

@@ -17,7 +17,7 @@ bread, hydrogenated oils, canola oil, corn oil, soybean oil, trans fats or alcoh
 #### 5:25 am 
 - I’ll consume an 8 oz (236 mL) drink consisting of:
 - 1 scoop of Blueprint Longevity Mix (details shown below)
-- Collagen protein, 11 g[batch-relevancy-eval.ts](../../../apps/batch/scripts/batch-relevancy-eval.ts)
+- Collagen protein, 11 g
 - Creatine, 2.5 g (Longevity Mix has 2.5 g for 5 g total. Blueprint Creatine in Dec 2024)
 - ½ tsp of prebiotic galactooligosaccharides
 - 1 tsp of Inulin
