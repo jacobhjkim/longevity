@@ -1,4 +1,5 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@repo/ui/accordion'
+import { siteConfig } from '~/config/site'
 
 export function LandingFaq() {
   return (
@@ -17,7 +18,9 @@ export function LandingFaq() {
         </AccordionItem>
         <AccordionItem value='item-1'>
           <AccordionTrigger>What is $LONGAI token's CA?</AccordionTrigger>
-          <AccordionContent>To be announced.</AccordionContent>
+          <AccordionContent>
+            <span className='font-mono'>{siteConfig.ca}</span>
+          </AccordionContent>
         </AccordionItem>
         <AccordionItem value='item-2'>
           <AccordionTrigger>What's the token distribution plan?</AccordionTrigger>
