@@ -8,7 +8,7 @@ export const siteConfig = {
     twitter: 'https://x.com/longevities_ai',
     github: 'https://github.com/jacobhjkim/longevity',
     telegram: 'https://t.me/longevity_ai_portal',
-    dexscreener: 'https://dexscreener.com',
+    dexscreener: 'https://dexscreener.com/solana/9yBr75m6TBZzQqHeh1ztfv454pmqAiAvHUHdpPQcpump',
     myTwitter: 'https://twitter.com/jacobhjkim',
   },
   navLinks: [
