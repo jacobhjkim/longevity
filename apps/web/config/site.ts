@@ -27,17 +27,15 @@ export const siteConfig = {
   sidebarLinks: [
     {
       label: 'GitHub',
-      href: 'https://github.com/longevities/longevities',
+      href: 'https://github.com/jacobhjkim/longevity',
     },
     {
       label: 'Twitter',
-      href: 'https://twitter.com/longevities',
+      href: 'https://x.com/longevities_ai',
     },
     {
       label: 'Telegram',
-      href: 'https://telegram.com',
+      href: 'https://t.me/+becwcDR1xkRiMjM1',
     },
   ],
 }
-
-export type SiteConfig = typeof siteConfig

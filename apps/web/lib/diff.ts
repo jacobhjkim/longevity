@@ -117,40 +117,6 @@ function calculateDiff(protocol: keyof typeof splits, r: Update) {
   }
 }
 
-/**
- * Same as `diff` but groups the results by protocol
- * @param data - Protocol update data
- */
-export function diffGroupByProtocol(data: Awaited<ReturnType<typeof queryProtocolUpdate>>): Result {
-  const result: Result = {
-    eat: [],
-    measurements: [],
-    exercise: [],
-    females: [],
-    pregnancy: [],
-  }
-
-  for (const research of data) {
-    for (const protocol of protocols) {
-      const protocolData = research[protocol]
-      if (protocolData?.length) {
-        const diff = protocolData.map((r) => calculateDiff(protocol, r))
-
-        result[protocol].push({
-          doi: research.doi,
-          title: research.title,
-          category: research.category,
-          server: research.server,
-          date: research.date,
-          diff,
-        })
-      }
-    }
-  }
-
-  return result
-}
-
 export type DiffWithProtocol = {
   doi: string
   title: string

@@ -1,0 +1,12 @@
+{
+  "changeType":"add",
+  "oldProtocol":"- Plasmalogens (1 mL of each Glia and Neuro)***",
+  "newProtocol":"- Resveratrol 500 mg*",
+  "reason":"Resveratrol has been shown to inhibit the NLRP3 inflammasome, which plays a pivotal role in the pathogenesis of Alzheimer's disease. Adding resveratrol may help modulate neuroinflammation and provide neuroprotective effects."
+}
+{
+  "changeType":"add",
+  "oldProtocol":"- Resveratrol 500 mg*",
+  "newProtocol":"- Quercetin 500 mg*",
+  "reason":"Quercetin is known to inhibit NLRP3 inflammasome activation and may help reduce neuroinflammation associated with Alzheimer's disease. Including quercetin may enhance anti-inflammatory effects and support cognitive health."
+}

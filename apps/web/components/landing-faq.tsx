@@ -18,13 +18,9 @@ export function LandingFaq() {
         <AccordionItem value='item-2'>
           <AccordionTrigger>What's the token distribution plan?</AccordionTrigger>
           <AccordionContent>
-            We will reserve 8% of the total supply for the team and 2% for the AI model fee. 16% for the airdrop, and
-            74% for the fair launch on Pump.fun.
+            We will reserve 8% of the total supply for the team and 2% for the AI model fee. 10% for the airdrop, and
+            the rest for fair launch on Pump.fun.
           </AccordionContent>
-        </AccordionItem>
-        <AccordionItem value='item-3'>
-          <AccordionTrigger>Is it animated?</AccordionTrigger>
-          <AccordionContent>Yes. It's animated by default, but you can disable it if you prefer.</AccordionContent>
         </AccordionItem>
       </Accordion>
     </div>
