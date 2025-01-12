@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import React from 'react'
 import { ProtocolTabs } from '~/components/protocol-tabs'
@@ -6,12 +7,24 @@ import { queryProtocolUpdateByDOI, queryProtocolUpdateDOI } from '~/server/queri
 
 export const dynamic = 'force-static'
 
-export async function generateMetadata({ params }: { params: { doi: string[] } }) {
+export async function generateMetadata({ params }: { params: { doi: string[] } }): Promise<Metadata> {
   const doi = params.doi.slice(0, 2).join('/')
+  const paper = await queryProtocolUpdateByDOI(doi)
+
+  if (!paper) {
+    return {}
+  }
 
   return {
     title: 'Protocol',
-    description: `Longevity insights AI agent generated from ${doi} research`,
+    description: `Longevity insights AI agent generated from ${paper.title}.`,
+    twitter: {
+      card: 'summary',
+      site: '@longevities_ai',
+      creator: '@longevities_ai',
+      title: paper.title,
+      description: `Longevity insights AI agent generated from ${paper.title}.`,
+    },
   }
 }
 
