@@ -1,6 +1,6 @@
 import { cursorTable, db, papersTable } from '@repo/db'
 import { incrementInterval } from '@repo/util'
-import { and, desc, eq, inArray } from 'drizzle-orm'
+import { and, desc, eq, gte, inArray } from 'drizzle-orm'
 import type { NodePgDatabase } from 'drizzle-orm/node-postgres'
 
 const DEFAULT_INTERVAL = '2022-01-01/2022-01-02'
@@ -127,5 +127,4 @@ export async function getUnprocessedRelevantPapers() {
     .from(papersTable)
     .where(and(eq(papersTable.isRelevant, 1), eq(papersTable.isProcessed, false)))
     .orderBy(desc(papersTable.date))
-    .limit(10)
 }

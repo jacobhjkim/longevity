@@ -115,6 +115,7 @@ async function sendRequestWithDoi({ doi, title, prompt }: { doi: string; title: 
 
 async function main() {
   const papers = await getUnprocessedRelevantPapers()
+  console.log(`Processing ${papers.length} papers...`)
 
   const promises = []
   for (const paper of papers) {

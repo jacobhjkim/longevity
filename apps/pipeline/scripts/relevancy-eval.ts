@@ -3,10 +3,10 @@ import { eat, exercise, females, measurements, pregnancy } from '@repo/protocol-
 import { incrementDateString } from '@repo/util'
 import Bun from 'bun'
 import OpenAI from 'openai'
-import { getUncheckedPapers, type getUncheckedPapersByDate } from '../src/queries'
+import { getUncheckedPapers, getUncheckedPapersByDate } from '../src/queries'
 
 const openai = new OpenAI()
-const INITIAL_DATE = '2022-01-01'
+const INITIAL_DATE = '2025-01-01'
 const BATCH_SIZE = 4500 // there is a file size limit of 200MB
 
 const systemPrompt = `You are tasked with evaluating research papers for relevance to a longevity research or my health protocol.
@@ -147,21 +147,22 @@ async function checkBatchStatus({ batchId }: { batchId: string }) {
 }
 
 async function main() {
+  // for local caching
   // const papers = await getUncheckedPapers()
   // await Bun.write('papers.json', JSON.stringify(papers, null, 2))
-  const papers = JSON.parse(await Bun.file('papers.json').text())
-  const batch = prepareBatchFile({ papers })
+  // const papers = JSON.parse(await Bun.file('papers.json').text())
+  // const batch = prepareBatchFile({ papers })
 
-  // let batch = [] as Awaited<ReturnType<typeof prepareBatchFile>>
-  // const today = new Date().toISOString().split('T')[0]
-  // let date = INITIAL_DATE
-  //
-  // while (date !== today) {
-  //   const papers = await getUncheckedPapersByDate({ date })
-  //   const newBatch = prepareBatchFile({ papers })
-  //   batch = batch.concat(newBatch)
-  //   date = incrementDateString(date)
-  // }
+  let batch = [] as Awaited<ReturnType<typeof prepareBatchFile>>
+  const today = new Date().toISOString().split('T')[0]
+  let date = INITIAL_DATE
+
+  while (date !== today) {
+    const papers = await getUncheckedPapersByDate({ date })
+    const newBatch = prepareBatchFile({ papers })
+    batch = batch.concat(newBatch)
+    date = incrementDateString(date)
+  }
 
   // save the batch as jsonl file and split it in a chunk of BATCH_SIZE
   console.log(`Entire batch size: ${batch.length}`)
