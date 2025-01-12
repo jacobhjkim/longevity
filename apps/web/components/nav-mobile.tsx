@@ -6,7 +6,6 @@ import * as React from 'react'
 
 import { Button } from '@repo/ui/button'
 import { Drawer, DrawerContent, DrawerTrigger } from '@repo/ui/drawer'
-import { Icons } from '~/components/icons'
 import { siteConfig } from '~/config/site'
 import { cn } from '~/lib/utils'
 

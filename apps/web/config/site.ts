@@ -1,14 +1,16 @@
+const ca = '9yBr75m6TBZzQqHeh1ztfv454pmqAiAvHUHdpPQcpump'
+
 export const siteConfig = {
   name: 'longevities.fun',
   url: 'https://longevities.fun',
   ogImage: 'https://longevities.fun/og.jpg',
   description: "An AI agent that mimics Bryan Johnson's Blueprint protocol.",
-  ca: '9yBr75m6TBZzQqHeh1ztfv454pmqAiAvHUHdpPQcpump',
+  ca,
   links: {
     twitter: 'https://x.com/longevities_ai',
     github: 'https://github.com/jacobhjkim/longevity',
     telegram: 'https://t.me/longevity_ai_portal',
-    dexscreener: 'https://dexscreener.com/solana/9yBr75m6TBZzQqHeh1ztfv454pmqAiAvHUHdpPQcpump',
+    dexscreener: `https://dexscreener.com/solana/${ca}`,
     myTwitter: 'https://twitter.com/jacobhjkim',
   },
   navLinks: [

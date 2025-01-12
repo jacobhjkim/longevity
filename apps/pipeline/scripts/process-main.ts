@@ -3,7 +3,7 @@ import { eat, exercise, females, measurements, pregnancy } from '@repo/protocol-
 import { eq } from 'drizzle-orm'
 import { OpenAI } from 'openai'
 import { zodResponseFormat } from 'openai/helpers/zod'
-import { outputFormat, outputFormatString, sanitize } from '../src/output-type'
+import { outputFormat, sanitize } from '../src/output-type'
 import { getUnprocessedRelevantPapers } from '../src/queries'
 
 const openai = new OpenAI()
