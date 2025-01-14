@@ -1,16 +1,26 @@
 import { type Character, Clients, ModelProviderName } from '@elizaos/core'
 import { bootstrapPlugin } from '@elizaos/plugin-bootstrap'
+import { Glob } from 'bun'
+
+const glob = new Glob('../characters/knowledge/**/*.md')
+const knowledgeList = []
+for (const file of glob.scanSync()) {
+  const path = file.replace('../characters/knowledge/', '')
+  knowledgeList.push({ path, shared: true })
+}
 
 export const character: Character = {
   id: '416659f6-a8ab-4d90-87b5-fd5635ebe37d',
   name: 'AIBryan',
   username: 'longevities_ai',
   plugins: [bootstrapPlugin],
-  clients: [Clients.TWITTER],
+  clients: [Clients.TWITTER, Clients.TELEGRAM],
   modelProvider: ModelProviderName.OPENAI,
   settings: {
     secrets: {},
+    ragKnowledge: true,
   },
+  knowledge: knowledgeList,
   system: 'Role-play as AI Bryan, a guy who is serious about longevity, health, and AI.',
   bio: [
     'I am a friendly and positive guy who is serious about longevity, health, and AI.',

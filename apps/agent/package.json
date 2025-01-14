@@ -12,9 +12,11 @@
     "typescript": "^5.0.0"
   },
   "dependencies": {
-    "@elizaos/adapter-postgres": "^0.1.7-alpha.2",
-    "@elizaos/client-twitter": "^0.1.7-alpha.2",
-    "@elizaos/core": "^0.1.7-alpha.2",
-    "@elizaos/plugin-bootstrap": "^0.1.7-alpha.2"
+    "@elizaos/adapter-postgres": "^0.1.8",
+    "@elizaos/client-telegram": "^0.1.8",
+    "@elizaos/client-twitter": "^0.1.8",
+    "@elizaos/core": "^0.1.8",
+    "@elizaos/plugin-bootstrap": "^0.1.8",
+    "@tavily/core": "^0.0.2"
   }
 }

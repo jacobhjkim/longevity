@@ -4,8 +4,7 @@ import { getAgentRuntime } from './providers'
 async function main() {
   const runtime = await getAgentRuntime()
   await runtime.initialize()
-
-  const clients = await getClients({ runtime })
+  await getClients({ runtime })
 }
 
 main().catch((err) => {

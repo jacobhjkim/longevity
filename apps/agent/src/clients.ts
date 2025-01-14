@@ -1,3 +1,4 @@
+import { TelegramClientInterface } from '@elizaos/client-telegram'
 import { TwitterClientInterface } from '@elizaos/client-twitter'
 import type { Character, IAgentRuntime } from '@elizaos/core'
 
@@ -18,7 +19,8 @@ export async function getClients({
   }
 
   if (clientTypes.includes('telegram')) {
-    throw new Error('Telegram client type is not supported')
+    const telegramClients = await TelegramClientInterface.start(runtime)
+    clients.push(telegramClients)
   }
 
   if (clientTypes.includes('twitter')) {
