@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import type React from 'react'
 import { LandingBlueprint } from '~/components/landing-blueprint'
+import { LandingCurrentProgress } from '~/components/landing-current-progress'
 import { Explanation } from '~/components/landing-explanation'
 import { LandingFaq } from '~/components/landing-faq'
 import { Features } from '~/components/landing-features'
@@ -20,6 +21,7 @@ export default async function Home() {
     <div className='h-full w-full flex-grow'>
       <main className='mx-auto flex h-full min-h-72 w-full flex-col items-center justify-center gap-4'>
         <Hero />
+        <LandingCurrentProgress />
         <Explanation />
         <LandingStats />
         <Features />

@@ -5,7 +5,7 @@ import { OpenAI } from 'openai'
 
 const openai = new OpenAI()
 
-const batches = ['batch_6783356b53248190b7fef168d2d368a0']
+const batches = ['batch_6785dd6e28f88190a211d0e09218f00c']
 
 /**
  * Get the results of the batch from OpenAI and save it to a file

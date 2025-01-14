@@ -4,6 +4,8 @@ import { and, eq } from 'drizzle-orm'
 import { BiorxivAPI } from '../src/biorxiv'
 import { getLatestCursor } from '../src/queries'
 
+const server = 'biorxiv'
+
 /**
  * Fetch papers from the specified interval and cursor
  * @param server - the server to fetch papers from (biorxiv or medrxiv)
@@ -123,7 +125,6 @@ async function fetchPapers({
 
 async function main() {
   const api = new BiorxivAPI()
-  const server = 'medrxiv'
   let { interval: currentInterval, cursor: currentCursor } = await getLatestCursor({ server })
   const todayInterval = getTodayInterval()
 

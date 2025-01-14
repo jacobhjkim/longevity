@@ -3,7 +3,7 @@ import { eat, exercise, females, measurements, pregnancy } from '@repo/protocol-
 import { incrementDateString } from '@repo/util'
 import Bun from 'bun'
 import OpenAI from 'openai'
-import { getUncheckedPapers, getUncheckedPapersByDate } from '../src/queries'
+import { getUncheckedPapersByDate } from '../src/queries'
 
 const openai = new OpenAI()
 const INITIAL_DATE = '2025-01-01'
@@ -173,22 +173,6 @@ async function main() {
   }
 
   console.log(`Batch IDs:\n${batchIds.join('\n')}`)
-
-  // const intervalId = setInterval(async () => {
-  //   const { status, outputFileId } = await checkBatchStatus({ batchId: batchResult.id })
-  //   console.log(`Checking batch status: ${status}`)
-  //   if (status === 'completed') {
-  //     if (outputFileId) {
-  //       const fileResponse = await openai.files.content(outputFileId)
-  //       const fileContents = await fileResponse.text()
-  //       await Bun.write('output.jsonl', fileContents)
-  //       console.log('Output written to output.jsonl')
-  //     }
-  //     // Clear the interval once the batch is done
-  //     clearInterval(intervalId)
-  //     console.log('Batch is done! Clearing interval.')
-  //   }
-  // }, 10_000) // every 10 seconds
 }
 
 main()

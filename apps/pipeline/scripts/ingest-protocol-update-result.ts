@@ -1,5 +1,4 @@
 import { db, papersTable } from '@repo/db'
-import { eat } from '@repo/protocol-data'
 import Bun from 'bun'
 import { eq } from 'drizzle-orm'
 import type { outputFormatType } from '../src/output-type'
