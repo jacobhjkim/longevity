@@ -1,6 +1,6 @@
-import { boolean, index, integer, json, pgTable, text, uniqueIndex } from 'drizzle-orm/pg-core'
+import { boolean, index, integer, json, pgTable, text, timestamp, uniqueIndex } from 'drizzle-orm/pg-core'
 
-type Update = {
+export type Update = {
   changeType: 'add' | 'update' | 'remove'
   oldProtocol: string
   newProtocol: string
@@ -58,4 +58,15 @@ export const cursorTable = pgTable(
     index('server_index').on(t.server),
     index('status_index').on(t.status),
   ],
+)
+
+export const tweetTable = pgTable(
+  'tweet_table',
+  {
+    id: text().primaryKey(),
+    paperDoi: text('paper_doi').references(() => papersTable.doi),
+    content: text().notNull(),
+    postedAt: timestamp().notNull(),
+  },
+  (t) => [index('tweet_paper_doi_index').on(t.paperDoi)],
 )

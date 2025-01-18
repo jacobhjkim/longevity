@@ -57,7 +57,7 @@ async function getDBProvider() {
     max: 20,
     idleTimeoutMillis: 30000,
     connectionTimeoutMillis: 2000,
-    getKnowledge: async () => [],
+    // getKnowledge: async () => [],
   })
 
   await db.testConnection()

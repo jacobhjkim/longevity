@@ -4,7 +4,7 @@ import { and, eq } from 'drizzle-orm'
 import { BiorxivAPI } from '../src/biorxiv'
 import { getLatestCursor } from '../src/queries'
 
-const server = 'biorxiv'
+const server = 'medrxiv'
 
 /**
  * Fetch papers from the specified interval and cursor

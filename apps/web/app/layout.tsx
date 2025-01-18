@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import '@repo/ui/globals.css'
+import { Toaster } from '@repo/ui/toaster'
 import { Analytics } from '@vercel/analytics/next'
 import { Inter, Roboto_Mono } from 'next/font/google'
 import { Footer } from '~/components/footer'
@@ -42,6 +43,7 @@ export default function RootLayout({
             <SiteHeader />
             <div className='flex min-h-96 w-full flex-1'>{children}</div>
             <Footer />
+            <Toaster />
             <Analytics />
           </div>
         </div>

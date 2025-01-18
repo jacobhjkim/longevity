@@ -16,11 +16,20 @@ export function LandingFaq() {
           <AccordionTrigger>What's the token distribution plan?</AccordionTrigger>
           <AccordionContent>
             <ul className='list-disc pl-4'>
-              <li>The team owns approximately 8% of the total supply. Of that 8%, half is locked for three months.</li>
+              <li>
+                The team owned approximately 8% of the total supply. Of that 8%, half is locked for three months. And 2%
+                is burned forever.
+              </li>
               <li>
                 An additional 10% of the total supply will be allocated to support this project and longevity research.
               </li>
             </ul>
+          </AccordionContent>
+        </AccordionItem>
+        <AccordionItem value='item-3'>
+          <AccordionTrigger>What is the utility of the token?</AccordionTrigger>
+          <AccordionContent>
+            <span className=''>There is no utility or whatsoever. It's a meme token...</span>
           </AccordionContent>
         </AccordionItem>
       </Accordion>

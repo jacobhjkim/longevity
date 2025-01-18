@@ -23,6 +23,7 @@
     "react-diff-viewer-continued": "^3.4.0",
     "react-dom": "^18.3.1",
     "react-markdown": "^9.0.3",
+    "react-notion-avatar": "^1.1.12",
     "remark-gfm": "^4.0.0"
   },
   "devDependencies": {
