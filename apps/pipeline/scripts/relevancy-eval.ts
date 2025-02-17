@@ -6,7 +6,7 @@ import OpenAI from 'openai'
 import { getUncheckedPapersByDate } from '../src/queries'
 
 const openai = new OpenAI()
-const INITIAL_DATE = '2025-01-14'
+const INITIAL_DATE = '2025-01-17'
 const BATCH_SIZE = 4500 // there is a file size limit of 200MB
 
 const systemPrompt = `You are tasked with evaluating research papers for relevance to a longevity research or my health protocol.

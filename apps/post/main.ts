@@ -8,7 +8,7 @@ const appSecret = process.env.TWITTER_API_SECRET
 const accessToken = process.env.TWITTER_ACCESS_TOKEN
 const accessSecret = process.env.TWITTER_ACCESS_TOKEN_SECRET
 
-if (!appKey || !appSecret || !accessToken || !accessSecret || !clientSecret) {
+if (!appKey || !appSecret || !accessToken || !accessSecret) {
   throw new Error('Please add your API keys in the .env file')
 }
 
